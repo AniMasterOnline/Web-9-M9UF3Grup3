@@ -6,48 +6,47 @@
         </style>
  
         <script type="text/javascript">
-        function limita(elEvento, maximoCaracteres) {
-          var elemento = document.getElementById("texto");
+            var valor = "";
+            function getvalues(){
+                valor = document.getElementById("texto").value +" \n";
+                valor = valor + document.getElementById("parrafo").value +" \n";
+                
+                var elementos = document.getElementsByName("pregunta");
+                for(var i=0; i<elementos.length; i++) {
+                  valor = valor +" Elemento: " + elementos[i].value + "\n Seleccionado: " + elementos[i].checked +" \n";
+                }
+                var elemento = document.getElementById("condiciones");
+                valor = valor +" Elemento: " + elemento.value + "\n Seleccionado: " + elemento.checked +" \n");
 
-          // Obtener la tecla pulsada 
-          var evento = elEvento || window.event;
-          var codigoCaracter = evento.charCode || evento.keyCode;
-          // Permitir utilizar las teclas con flecha horizontal
-          if(codigoCaracter == 37 || codigoCaracter == 39) {
-            return true;
-          }
+                elemento = document.getElementById("privacidad");
+                valor = valor +" Elemento: " + elemento.value + "\n Seleccionado: " + elemento.checked +" \n";
+                
+                
+                alert(valor);
+            }
+            
+            
 
-          // Permitir borrar con la tecla Backspace y con la tecla Supr.
-          if(codigoCaracter == 8 || codigoCaracter == 46) {
-            return true;
-          }
-          else if(elemento.value.length >= maximoCaracteres ) {
-            return false;
-          }
-          else {
-            return true;
-          }
-        }
-
-        function actualizaInfo(maximoCaracteres) {
-          var elemento = document.getElementById("texto");
-          var info = document.getElementById("info");
-
-          if(elemento.value.length >= maximoCaracteres ) {
-            info.innerHTML = "Máximo "+maximoCaracteres+" caracteres";
-          }
-          else {
-            info.innerHTML = "Puedes escribir hasta "+(maximoCaracteres-elemento.value.length)+" caracteres adicionales";
-          }
-        }
-
+        
         </script>
     </head>
  
     <body>
-
-        <div id="info">Máximo 100 caracteres</div>
-        <textarea id="texto" onkeypress="return limita(event, 100);" onkeyup="actualizaInfo(100)" rows="6" cols="30"></textarea>
+        <button onclick="getvalues()">Get Values</button>
+        <hr>
+        <form name="formulario">
+            <label>Text Input <input type="text" id="texto" value="Text Input" /> </label> <br> <br>
+            <label>Text Area  <textarea id="parrafo" >Text area</textarea> </label> <br> <br>
+            <label>Radio Button <br>
+                <input type="radio" value="si" name="pregunta" id="pregunta_si"/> SI <br>
+                <input type="radio" value="no" name="pregunta" id="pregunta_no"/> NO <br>
+                <input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc" checked/> NS/NC
+            </label> <br> <br>
+            <input type="checkbox" value="check box 1" name="condiciones" id="condiciones"/> Check box 1 <br>
+            <input type="checkbox" value="check box 2" name="privacidad" id="privacidad" checked/> Check box 2
+            
+        </form>
+        
 
     </body>
 </html>
