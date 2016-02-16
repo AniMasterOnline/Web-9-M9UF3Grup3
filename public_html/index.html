@@ -1,17 +1,86 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>AniMasterOnline</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <LINK REL=StyleSheet HREF="public/css/style.css" TYPE="text/css" MEDIA=screen>
+        <script src="public/jquery/jquery-1.12.0.min.js"></script>
+        <script src="public/jquery/slyder.js"></script>
     </head>
     <body>
-        <div>TODO write content</div>
-        <p>VideoGames Hobie!!</p>
+        <!-- Header content box -->
+        <div class="header-box">
+            <div class="header-nav">
+                <ul class="nav">
+                    <li><a id="active" href="index.php">Inicio</a> <span class="flecha">&#9660</span></li>
+                    <li><a href="#Media">Ps4 <span class="flecha">&#9660</span></a>
+                        <ul>
+                            <li><a href="">Submenu1 <span class="flecha">&#9660</span></a></li>
+                            <li><a href="">Submenu2 <span class="flecha">&#9660</span></a></li>
+                            <li><a href="">Submenu3 <span class="flecha">&#9660</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#Novedades">Wii U <span class="flecha">&#9660</span></a>
+                        <ul>
+                            <li><a href="">Submenu1 <span class="flecha">&#9660</span></a></li>
+                            <li><a href="">Submenu2 <span class="flecha">&#9660</span></a></li>
+                            <li><a href="">Submenu3 <span class="flecha">&#9660</span></a></li>
+                        </ul>
+                    <li><a href="#Mi Mesa">Xbox one <span class="flecha">&#9660</span></a>
+                        <ul>
+                            <li><a href="">Submenu1 <span class="flecha">&#9660</span></a></li>
+                            <li><a href="">Submenu2 <span class="flecha">&#9660</span></a></li>
+                            <li><a href="">Submenu3 <span class="flecha">&#9660</span></a></li>
+                        </ul>
+                    <li style="float:right;"><a href="#">Info <span class="flecha">&#9660</span></a></li>
+                </ul>
+            </div>
+            <div class="header-logo">
+            </div>
+        </div>
+        
+        <!-- Aside content box -->
+        <div class="body-box">
+            <!-- Aside content box -->
+            <div class="aside-box">
+                <div class="aside-title">
+                    Formulari
+                </div>
+                <div class="aside-2">
+                    <?php include "public/layouts/registre.php";?>
+                </div>
+            </div>
+            <!-- Body content box -->
+            <div class="content-box">
+                <div class="content-title">
+                    Multi-Juegos Online
+                </div>
+                <div class="content-slider">
+                    
+                </div>
+                <div class="content-zone">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Footer content box -->
+        <div class="footer-box">
+            <div class="footer-social">
+                
+                
+            </div>
+            <div class="footer-links">
+
+            </div>
+            <div class="footer-logos">
+
+            </div>
+            <div class="footer-other">
+                <center>
+                    <br>
+                    MultiJuegosOnline de Marc i David està subjecta a una llicència de <a class="link" rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Reconeixement-NoComercial-CompartirIgual 4.0 Internacional de Creative Commons</a>
+                </center>
+            </div>
+        </div>
     </body>
 </html>
