@@ -1,3 +1,67 @@
+input[type="search"]{
+	width: 45px; /*ancho por defecto*/
+	background: #ededed center; /*icono lupa*/
+        background-image: url('../img/search.png');
+        background-repeat: no-repeat;
+        background-size: 10px;
+	padding: 9px 10px 9px 32px;
+	border-radius: 15em;
+	-webkit-transition: all .5s; /* transición de .5seg a todos los elementos para chrome*/
+	-moz-transition: all .5s; /* transición de .5seg a todos los elementos para mozilla*/
+	-o-transition: all .5s; /* transición de .5seg a todos los elementos para ophera*/
+	transition: all .5s; /* transición de .5seg a todos los elementos*/
+	outline: none; /* ocultar el fucos automático de los input */
+}
+input[type="search"]:focus{
+	width: 100%; /*tamaño del boton buscar al hacer click*/
+	padding-left: 32px; /*espacio entre el icono lupa y el placeholder*/
+	color: #000;
+	background-color: #FFF;
+}
+
+#neon {
+  text-align: center;
+  font-size: 7em;
+  margin: 20px 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#neon a {
+  color: yellow;
+  font-family: Monoton;
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+  
+}
+
+#neon a:hover {
+  color: #fff;
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+input:focus{
+    background-color: greenyellow;
+}
+textarea:focus{
+    background-color: greenyellow;
+}
 /* Body Style Zone */
 body{
     background-image: url("../img/background.png");
@@ -19,7 +83,15 @@ body{
 }
 .link{
     text-decoration: none;
-    color: #55acee;
+    color: whitesmoke;
+    text-decoration: underline;
+    background-color: #00171F;
+    padding: 3px;
+    border: 1px solid black;
+    display: block;
+}
+.link:hover{
+    color: chartreuse;
 }
 .link:visited{
     text-decoration: none;
@@ -126,7 +198,20 @@ body{
     }
     .content-slider{
         background-color:rgba(98,93,106,0.8);
+        background-image: url("http://cdn.cgmagonline.com/wp-content/uploads/2015/06/Darksouls3-feature.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color: wheat;
+        font-weight: 600;
         padding: 1%;
+    }
+    .content-slider span{
+        background-color:rgba(33,33,33,0.8);
+        
+        color: rgb(86,255,0);
+        font-weight: 800;
+        padding: 1%;
+        display: block;
     }
     .content-zone{
         background-color:rgba(250,250,255,0.8);
@@ -169,7 +254,7 @@ body{
         margin-bottom: 3px;
     }
     .aside-1{
-        background-color:rgba(250,250,255,0.8);
+        background-color:rgba(33,33,33,0.8);
         border-radius: 0px 0px 6px 6px;
         padding: 0.5%;
     }
